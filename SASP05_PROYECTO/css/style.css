@@ -106,7 +106,7 @@ section:nth-child(odd) {
 }
 
 .site-header img {
-    width: 320px;
+    width: 200px;
     height: auto;
     margin-bottom: 15px;
     border-radius: 20%;
@@ -459,3 +459,4 @@ td {
 section {
     animation: fadeIn 0.5s ease-out;
 }
+
