@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Cambia el título por algo relacionado con tu temática -->
+  <title>Entre Páginas y Pantallas</title>
+  <link rel="stylesheet" href="sasp05_proyecto/css/style.css">
+</head>
+<body>
+  <!-- CABECERA GLOBAL DEL SITIO -->
+  <header class="site-header">
+
+    <!-- TODO: Cambia el título por algo relacionado con tu temática -->
+     <img src="IMG/logo.png" alt="Logo Spoiler sin Spoilers">
+     <div>
+        <h1>h1</h1>
+        <h2>h2</h2>
+     </div>
+    
+    
+
+    <!-- TODO: Menú superior con enlaces a secciones de la misma página -->
+    <nav class="main-nav">
+        <li> <a href="sostenibilidad.html">Inicio</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li> <a href="ciclo-vida.html">Ciclo de vida</a></li>
+        <li><a href="producto.html">Producto</a></li>
+    </nav>
+  </header>
+
+  <!-- BOTÓN HAMBURGUESA FIJO PARA EL MENÚ LATERAL -->
+  <button class="open-menu" aria-label="Abrir menú lateral">☰</button>
+
+  <!-- MENÚ LATERAL DESLIZANTE -->
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+        <li> <a href="sostenibilidad.html">Inicio</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li> <a href="ciclo-vida.html">Ciclo de vida</a></li>
+        <li><a href="producto.html">Producto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section id="punto1">
+        <h2>h2</h2>
+        <p>p</p>
+    </section>
+    <section id="punto2">
+        <h2>h2</h2>
+        <p>p</p>
+    </section>
+    <section id="punto3">
+    <h2>h2</h2>
+    <p>p</p>
+
+    </section>
+        <!-- SECCIÓN TABLA -->
+    <section id="punto4">
+    <h2>h2</h2>
+    <p>p</p>
+
+    </section>
+  </main>
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <p><a href="#hero">&copy; 2025 — 1º DAM, IES Saladillo</a></p>
+  </footer>
+  <!-- JavaScript mínimo para abrir/cerrar el menú lateral -->
+  <script>
+    const sideMenu = document.getElementById("sideMenu");
+    const toggleBtn = document.querySelector(".open-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+      toggleBtn.classList.toggle("active");
+
+      toggleBtn.textContent =
+        sideMenu.classList.contains("active") ? "✖" : "☰";
+    });
+
+    let lastScroll = 0; /* he investigado como hacer para que aparezca y desaparezca la barra nav segun haa scroll hacia abajo o hacia arriba*/
+  const header = document.querySelector(".site-header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      // Scroll hacia abajo -> ocultar
+      header.classList.add("hide");
+    } else {
+      // Scroll hacia arriba -> mostrar
+      header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+  });
+  </script>
+
+</body>
+</html>
