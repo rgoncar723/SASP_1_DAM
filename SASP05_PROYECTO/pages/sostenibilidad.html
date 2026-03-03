@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BioAcción - Sostenibilidad</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/sostenibilidad_app.js" defer></script>
 </head>
 <body>
 
@@ -33,6 +34,7 @@
         <li><a href="#sector-tecnologico">Sector Tecnológico</a></li>
         <li><a href="#analisis-impacto">Riesgos y Oportunidades</a></li>
         <li><a href="#acciones-desarrollador">Acciones Concretas</a></li>
+        <li><a href="#formulario-unirse">Formulario</a></li>
     </ul>
   </nav>
 
@@ -76,14 +78,14 @@
         <div class="Porque_leerlo">
           <h3>ODS 15: Vida de Ecosistemas Terrestres</h3>
           <p>
-            Desde la fauna hasta la flora, es vital mantener el ecosistema natural en equilibrio. Nuestro proyecto se especializa en todo aquello relacionado con la flora y el terreno, aunque de forma inmediata también se ve beneficiada la fauna local, permitiendo también mantener a raya los posibles efectos negativos que el factor humano y climático pudieran tener sobre ellos.
+            Desde la fauna hasta la flora, es vital mantener el ecosistema natural en equilibrio. Nuestro proyecto se especializa en todo aquello relacionado con la flora y el terreno, aunque de forma inmediata también se ve beneficiada la fauna local, permitiendo también <strong>mantener a raya los posibles efectos negativos que el factor humano y climático</strong> pudiera tener sobre ellos.
           </p>
         </div>
 
         <div class="Porque_leerlo">
           <h3>ODS 17: Alianzas</h3>
           <p>
-            La unión hace la fuerza, y una sola persona por muy buenas intenciones que tenga no sería capaz de llevar a cabo un mantenimiento organizado y beneficioso para el medio ambiente, como el que planteamos en nuestro proyecto. Solo con la colaboración y conexión entre ciudadanos, vecinos, amigos, ONGs y entidades públicas interesadas, se puede llegar al punto ideal que planteamos, donde la organización adecuada de cada voluntario significa una parte vital.
+            La unión hace la fuerza, y una sola persona por muy buenas intenciones que tenga no sería capaz de llevar a cabo un mantenimiento organizado y beneficioso para el medio ambiente, como el que planteamos en nuestro proyecto. Solo con la <strong>colaboración y conexión</strong> entre ciudadanos, vecinos, amigos, ONGs y entidades públicas interesadas, se puede llegar al punto ideal que planteamos, donde la organización adecuada de cada voluntario significa una parte vital.
           </p>
         </div>
 
@@ -149,41 +151,38 @@
         Para empezar predicando con el ejemplo nos tenemos que comprometer desde el principio, por ello nos preocupamos de que nuestro código no provoque un derroche de energía innecesario, <strong>optimizándolo</strong> pensando tanto en el rendimiento de la web, como en el peso que tendrá energéticamente en los servidores, los cuales procuraremos que sean <strong>sostenibles y eficientes</strong>. Además, la sostenibilidad también tiene un ámbito social, por lo que nos preocupamos de aplicar estándares de accesibilidad para que cualquier persona pueda <strong>participar y conocer nuestro proyecto</strong>.
       </p>
     </section>
+
+    <section id="formulario-unirse">
+      <h2>¿Quieres estar informado?</h2>
+      <p>Puedes registrarte y recibir notificaciones y novedades por correo electrónico.</p>
+
+      <form id="formulario" novalidate>
+        <label>Nombre
+          <input id="nombre" type="text">
+        </label>
+
+        <label>Apellidos
+          <input id="apellidos" type="text">
+        </label>
+
+        <label>Email
+          <input id="email" type="email" placeholder="correo@dominio.com">
+        </label>
+        
+        <label class="check">
+          <input id="condiciones" type="checkbox">
+          Acepto las condiciones
+        </label>
+
+        <div id="mensajes"></div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p><a href="#hero">&copy; 2025 — 1º DAM, IES Saladillo</a></p>
+    <p><a href="#hero">&copy; 2026 — 1º DAM, IES Saladillo</a></p>
   </footer>
-  <!-- pasar esto ↓ al js -->
-  <script>
-    const sideMenu = document.getElementById("sideMenu");
-    const toggleBtn = document.querySelector(".open-menu");
-
-    toggleBtn.addEventListener("click", () => {
-      sideMenu.classList.toggle("active");
-      toggleBtn.classList.toggle("active");
-
-      toggleBtn.textContent =
-        sideMenu.classList.contains("active") ? "✖" : "☰";
-    });
-
-    let lastScroll = 0; /* he investigado como hacer para que aparezca y desaparezca la barra nav segun haa scroll hacia abajo o hacia arriba*/
-  const header = document.querySelector(".site-header");
-
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll && currentScroll > 50) {
-      // Scroll hacia abajo -> ocultar
-      header.classList.add("hide");
-    } else {
-      // Scroll hacia arriba -> mostrar
-      header.classList.remove("hide");
-    }
-
-    lastScroll = currentScroll;
-  });
-  </script>
 
 </body>
 </html>
