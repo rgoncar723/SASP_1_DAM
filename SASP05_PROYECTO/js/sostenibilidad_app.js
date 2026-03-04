@@ -49,8 +49,6 @@ const header = document.querySelector(".site-header");
             const nameValue = document.querySelector("#nombre").value.trim();
             const surnameValue = document.querySelector("#apellidos").value.trim();
             const emailValue = document.querySelector("#email").value.trim();
-            const passwordValue = document.querySelector("#password").value;
-            const password2Value = document.querySelector("#password2").value;
             const checkConditions = document.querySelector("#condiciones").checked; 
             const errTimer = 2000;
 
@@ -71,14 +69,6 @@ const header = document.querySelector(".site-header");
                 errores.push("Email inválido, por favor, utiliza \"@.\" adecuadamente.")
             }
 
-            if (passwordValue.length < 6){
-                errores.push("La contraseña debe tener al menos 6 caracteres.")
-            };
-
-            if (passwordValue !== password2Value){
-                errores.push("Las contraseñas tienen que ser iguales.")
-            };
-
             if (!checkConditions){
                 errores.push("Debes aceptar las condiciones.")
             };
@@ -92,6 +82,8 @@ const header = document.querySelector(".site-header");
             },errTimer);
             }else {
                 mensajes.className = "mensajes ok";
+                mensajes.innerHTML = "¡Gracias por interesarte!"
+                formulario.reset();
             };
 
             });
