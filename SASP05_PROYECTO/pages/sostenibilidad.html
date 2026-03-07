@@ -18,7 +18,7 @@
      </div>
     
     <nav class="main-nav">
-        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="../../index.html">Inicio</a></li>
         <li><a href="../pages/equipo.html">Economía Circular</a></li>
         <li><a href="../pages/ciclo-vida.html">Ciclo de vida</a></li>
         <li><a href="../pages/producto.html">Producto</a></li>
@@ -157,27 +157,30 @@
       <h2>¿Quieres estar informado?</h2>
       <p>Puedes registrarte y recibir notificaciones y novedades por correo electrónico.</p>
 
-      <form id="formulario" novalidate>
-        <label>Nombre
-          <input id="nombre" type="text">
-        </label>
+      <form id="formulario" class="formulario" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" placeholder="Tu nombre">
+        </div>
 
-        <label>Apellidos
-          <input id="apellidos" type="text">
-        </label>
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input id="apellidos" type="text" placeholder="Tus apellidos">
+        </div>
 
-        <label>Email
+        <div class="form-group">
+          <label for="email">Email</label>
           <input id="email" type="email" placeholder="correo@dominio.com">
-        </label>
+        </div>
 
-        <label class="check">
+        <label class="check-container">
           <input id="condiciones" type="checkbox">
-          Acepto las condiciones
+          <span>Acepto las condiciones</span>
         </label>
 
         <div id="mensajes"></div>
         <button type="submit">Enviar</button>
-      </form>
+</form>
     </section>
   </main>
 
