@@ -41,7 +41,7 @@ function activateIrrigation() {
 }
 
 /* 
-    3. INICIALIZACIÓN DEL MAPA (LEAFLET)
+ 3. INICIALIZACIÓN DEL MAPA (LEAFLET)
      */
 
 window.addEventListener('load', function() {
@@ -82,7 +82,7 @@ window.addEventListener('load', function() {
 });
 
 /* 
-    4. GESTIÓN DE EVENTOS COMUNITARIOS
+4. GESTIÓN DE EVENTOS COMUNITARIOS
      */
 
 /**
@@ -115,7 +115,7 @@ function unirseEvento(id) {
 }
 
 /* 
-    5. FORMULARIO DE NUEVOS EVENTOS
+5. FORMULARIO DE NUEVOS EVENTOS
     */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -148,3 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
           });
      }
 });
+
