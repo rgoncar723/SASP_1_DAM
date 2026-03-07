@@ -1,4 +1,6 @@
-/* ===== RESET Y ESTILOS GLOBALES ===== */
+/* ==========================================================================
+   1. RESET Y ESTILOS GLOBALES (FUSIONADOS)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -85,14 +87,21 @@ section {
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(45, 90, 39, 0.05);
     border-left: 6px solid #7ea24f; 
+    animation: fadeIn 0.5s ease-out;
 }
 
 section:nth-child(odd) {
     border-left-color: #FF8A5B; 
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-/* ===== CABECERA ===== */
+/* ==========================================================================
+   2. CABECERA Y NAVEGACIÓN (FUSIONADOS)
+   ========================================================================== */
 .site-header {
     background: linear-gradient(135deg, #ffffff 0%, #7ea24f 100%);
     color: #2D5A27;
@@ -104,7 +113,7 @@ section:nth-child(odd) {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100; /* Actualizado a 100 del nuevo CSS */
     transition: transform 0.3s ease;
 }
 
@@ -116,7 +125,6 @@ section:nth-child(odd) {
     margin-right: 20px;
     border-radius: 20%;
     order: 3;
-    
 }
 
 .site-header div {
@@ -146,7 +154,7 @@ section:nth-child(odd) {
   transform: translateY(-100%);
 }
 
-/* ===== MENÚ PRINCIPAL ===== */
+/* MENÚ PRINCIPAL */
 .main-nav {
     width: 100%;
     display: flex;
@@ -154,6 +162,14 @@ section:nth-child(odd) {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav li {
@@ -170,6 +186,7 @@ section:nth-child(odd) {
     font-weight: 600;
     transition: all 0.3s;
     display: block;
+    white-space: nowrap; 
 }
 
 .main-nav a:hover {
@@ -178,7 +195,7 @@ section:nth-child(odd) {
     transform: translateY(-2px);
 }
 
-/* ===== BOTÓN HAMBURGUESA ===== */
+/* MENÚ LATERAL Y HAMBURGUESA */
 .open-menu {
     position: fixed;
     top: 20px;
@@ -201,7 +218,6 @@ section:nth-child(odd) {
     transform: scale(1.1);
 }
 
-/* ===== MENÚ LATERAL ===== */
 .side-menu {
     position: fixed;
     top: 0;
@@ -237,6 +253,7 @@ section:nth-child(odd) {
     border-radius: 6px;
     transition: all 0.3s;
     font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .side-menu a:hover {
@@ -245,7 +262,9 @@ section:nth-child(odd) {
     padding-left: 20px;
 }
 
-/* ===== SECCIÓN HERO ===== */
+/* ==========================================================================
+   3. SECCIONES ESPECIALES (HERO Y GALLERY)
+   ========================================================================== */
 #hero {
     text-align: center;
     padding: 60px 40px;
@@ -275,183 +294,6 @@ section:nth-child(odd) {
     line-height: 1.8;
 }
 
-/* ===== SECCIONES DE CONTENIDO ===== */
-#libro-1984, #libro-Amor, #libro-Cronica, #libro-Coronel,
-#Maldicion, #Cofre, #Fin_del_mundo, #Mareas_Misteriosas,
-#la_venganza_de_salazar, #Avatar_1, #Avatar_2 {
-    border-top: 1px solid #eee;
-    padding-top: 30px;
-}
-
-.Sinopsis, .Opinion_Personal, .Porque_leerlo, .Porque_verla,
-.Analisis, .Destacada {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    margin: 20px 0;
-    border-left: 5px solid #7ea24f;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-}
-
-.Opinion_Personal {
-    border-left-color: #FF8A5B; /* Tono social/testimonio */
-}
-
-.Porque_leerlo, .Porque_verla {
-    border-left-color: #A8D632; /* Tono vitalidad */
-}
-
-.Analisis {
-    border-left-color: #7ea24f;
-}
-
-.Destacada {
-    border-left-color: #7D5A50; /* Tono tierra */
-}
-
-/* ===== TABLAS ===== */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-thead {
-    background: linear-gradient(135deg, #2D5A27 0%, #7ea24f 100%);
-    color: white;
-}
-
-th {
-    padding: 15px;
-    text-align: left;
-    font-weight: 600;
-}
-
-tbody tr {
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9fbf7;
-}
-
-tbody tr:hover {
-    background-color: rgba(168, 214, 50, 0.1);
-}
-
-td {
-    padding: 15px;
-}
-
-/* ===== FORMULARIO ===== */
-.formulario {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 25px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.formulario label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #4a3421;
-}
-
-.formulario input, .formulario textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid #e1e8ed;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.formulario input:focus, .formulario textarea:focus {
-    border-color: #7ea24f;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(126, 162, 79, 0.2);
-}
-
-.formulario button {
-    background: linear-gradient(135deg, #FF8A5B 0%, #f07643 100%);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all 0.3s;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.formulario button:hover {
-    background: linear-gradient(135deg, #f07643 0%, #FF8A5B 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 138, 91, 0.4);
-}
-
-/* ===== SECCIÓN CONTACTO ===== */
-#Contacto {
-    text-align: center;
-    padding: 40px;
-    background: linear-gradient(135deg, rgba(126, 162, 79, 0.1) 0%, rgba(255, 138, 91, 0.1) 100%);
-    border-radius: 15px;
-    border-left: none;
-}
-
-.contact-info {
-    max-width: 600px;
-    margin: 30px auto 0;
-    padding: 25px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.contact-info a {
-    color: #2D5A27;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.contact-info a:hover {
-    color: #FF8A5B;
-    text-decoration: underline;
-}
-
-/* ===== PIE DE PÁGINA ===== */
-.site-footer {
-    background: linear-gradient(135deg, #1e3d1a 0%, #2D5A27 100%);
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 60px;
-}
-
-.site-footer a {
-    color: #A8D632;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.site-footer a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* ===== SECCION GALLERY ===== */
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -472,56 +314,272 @@ td {
     transform: scale(1.03);
 }
 
-/* ===== ANIMACIONES ===== */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* ==========================================================================
+   4. COMPONENTES DE BIOACCIÓN (MAPA Y DASHBOARD) - NUEVO
+   ========================================================================== */
+.dashboard-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    background: #f0f4f0;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
-section {
-    animation: fadeIn 0.5s ease-out;
+#map {
+    flex: 2;
+    min-width: 350px !important;
+    height: 500px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    z-index: 1; 
+    border: 2px solid #7ea24f;
 }
 
-/* ===== CSS PARA EL FORMULARIO ===== */
-#formulario {
+.leaflet-container {
+    height: 500px;
+    width: 100%;
+}
+
+.tree-details {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    max-width: 400px;
-    margin: 20px auto;
+    justify-content: center;
 }
 
-#formulario label {
-    font-weight: bold;
-    color: #2D5A27;
-    margin-bottom: 2px;
-
+.card-content p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 5px;
 }
 
-#formulario input {
-    margin-bottom: 8px;
+.progress-bar-bg {
+    width: 100%;
+    height: 14px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
 }
 
-#formulario button {
-    background: #FF8A5B;
+.progress-bar-fill {
+    height: 100%;
+    background: #2980b9;
+    width: 0%; 
+    transition: width 0.8s ease-in-out, background-color 0.5s;
+}
+
+.btn-action {
+    background: linear-gradient(135deg, #FF8A5B 0%, #f07643 100%);
     color: white;
-    padding: 12px;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
     cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
 }
 
-#mensajes {
-    font-size: .7em;
-    font-weight: bold;
-    margin-top: 10px;
+.btn-action:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 138, 91, 0.4);
 }
 
-.err {
-    color: red;
+/* ==========================================================================
+   5. CONTENIDO DE LIBROS Y FILTROS
+   ========================================================================== */
+#libro-1984, #libro-Amor, #libro-Cronica, #libro-Coronel,
+#Maldicion, #Cofre, #Fin_del_mundo, #Mareas_Misteriosas,
+#la_venganza_de_salazar, #Avatar_1, #Avatar_2 {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
 }
 
-.ok {
-    color: green;
+.Sinopsis, .Opinion_Personal, .Porque_leerlo, .Porque_verla,
+.Analisis, .Destacada {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 5px solid #7ea24f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.Opinion_Personal { border-left-color: #FF8A5B; }
+.Porque_leerlo, .Porque_verla { border-left-color: #A8D632; }
+.Analisis { border-left-color: #7ea24f; }
+.Destacada { border-left-color: #7D5A50; }
+
+/* FILTROS Y BUSCADOR (NUEVO) */
+.filtros {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f4f0; 
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e0e7da;
+}
+
+#busqueda {
+    width: 100%;
+    max-width: 400px; 
+    padding: 12px 20px 12px 45px; 
+    border: 2px solid #e0e7da;
+    border-radius: 30px; 
+    font-size: 1rem;
+    color: #3e4a3d;
+    background-color: #ffffff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%237ea24f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   6. TABLAS Y FORMULARIOS (FUSIONADOS)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(135deg, #2D5A27 0%, #7ea24f 100%);
+    color: white;
+}
+
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+
+tbody tr:hover { background-color: rgba(168, 214, 50, 0.1); }
+
+/* Badges y Botones de Tabla */
+.badge { padding: 5px 10px; border-radius: 15px; font-size: 0.85em; font-weight: bold; }
+.safe { background-color: #d4edda; color: #155724; }
+.warning { background-color: #fff3cd; color: #856404; }
+.danger { background-color: #f8d7da; color: #721c24; }
+
+.btn-unirse {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* FORMULARIOS (MANTENIENDO AMBAS CLASES) */
+.formulario, .form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(45, 90, 39, 0.05);
+    border-left: 6px solid #7ea24f;
+}
+
+.formulario label, .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a3421;
+}
+
+.formulario input, .formulario textarea, 
+.form-container input, .form-container textarea, .form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.formulario button, .form-container button {
+    background: linear-gradient(135deg, #FF8A5B 0%, #f07643 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+/* Estilos específicos para validación JS anterior */
+#mensajes { font-size: .7em; font-weight: bold; margin-top: 10px; }
+.err { color: red; }
+.ok { color: green; }
+#mensaje-exito {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   7. SECCIÓN CONTACTO Y PIE DE PÁGINA
+   ========================================================================== */
+#Contacto {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(126, 162, 79, 0.1) 0%, rgba(255, 138, 91, 0.1) 100%);
+    border-radius: 15px;
+    border-left: none;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.site-footer {
+    background: linear-gradient(135deg, #1e3d1a 0%, #2D5A27 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.site-footer a {
+    color: #A8D632;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #busqueda { max-width: 100%; }
+    .site-header { flex-direction: column; }
 }
