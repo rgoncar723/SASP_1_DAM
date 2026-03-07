@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioAcción - Ecodiseño y Producto</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://leafletjs.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="IMG/logo.png" alt="Logo BioAcción">
+        <div>
+            <h1>BioAcción</h1>
+            <h2>Ecodiseño: Innovación con Baja Huella</h2>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="equipo.html">Economía Circular</a></li>
+                <li><a href="ciclo-vida.html">Ciclo de vida</a></li>
+                <li><a href="producto.html">Producto</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button class="open-menu" aria-label="Abrir menú lateral">☰</button>
+
+    <nav id="sideMenu" class="side-menu">
+        <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="equipo.html">Economía circular</a></li>
+            <li><a href="ciclo-vida.html">Ciclo de vida</a></li>
+            <li><a href="producto.html">Producto</a></li>
+            <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="hero">
+            <h2>Filosofía de Ecodiseño</h2>
+            <p>
+                En BioAcción, el diseño no es solo estética; es responsabilidad. Aplicamos principios de 
+                <strong>Ecodiseño</strong> para reducir el impacto ambiental desde la fase de concepción, 
+                asegurando que tanto nuestras herramientas físicas como digitales consuman el mínimo de recursos posibles.
+            </p>
+        </section>
+
+        <section id="ecodiseno-producto">
+            <h2>1. Ecodiseño Aplicado al Producto y Servicio</h2>
+            <p>Nuestro sistema de monitoreo y riego inteligente ha sido proyectado bajo criterios de <strong>desmaterialización</strong> y <strong>eficiencia energética</strong>.</p>
+            
+            <div class="Analisis">
+                <h4>Sistemas de Riego e Identificadores:</h4>
+                <ul>
+                    <li><strong>Modularidad:</strong> Los sensores y válvulas están diseñados como módulos independientes...</li>
+                    <li><strong>Energía Solar de Capa Fina:</strong> Utilizamos paneles fotovoltaicos integrados de alta eficiencia...</li>
+                    <li><strong>Identificadores Biodegradables:</strong> Etiquetas fabricadas con biopolímeros derivados de residuos agrícolas...</li>
+                    <li><strong>Optimización Hídrica:</strong> El algoritmo reduce el desperdicio de agua en un 40% mediante sensores capacitivos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ecodiseno-web">
+            <h2>2. Ecodiseño Digital: Una Web Sostenible</h2>
+            <p>La infraestructura digital también contamina. Optimizamos nuestra plataforma para reducir su <strong>huella de carbono digital</strong>.</p>
+
+            <div class="Opinion_Personal">
+                <h3>Principios de "Green Web Design":</h3>
+                <ul>
+                    <li><strong>Ligereza y Rendimiento:</strong> Minimización de scripts pesados y librerías innecesarias.</li>
+                    <li><strong>Simplicidad Visual:</strong> Diseño limpio que mejora UX y reduce tiempo de carga.</li>
+                    <li><strong>Accesibilidad Universal:</strong> Cumplimiento de pautas WCAG para inclusión social (ODS 10).</li>
+                    <li><strong>Uso Responsable:</strong> Implementación de "Modo Oscuro" para ahorro en pantallas OLED.</li>
+                </ul>
+            </div>
+
+            <div class="Destacada">
+                <h3>Compromiso de Hosting Verde</h3>
+                <p>Servidores alimentados al <strong>100% por energías renovables</strong>, garantizando clics neutros en CO2.</p>
+            </div>
+        </section>
+
+        <section id="justificacion-tecnica">
+            <h2>Justificación Técnica</h2>
+            <div class="Porque_leerlo">
+                <table border="1" cellspacing="0" cellpadding="8" style="width:100%; margin-top:20px;">
+                    <thead>
+                        <tr>
+                            <th>Principio de Ecodiseño</th>
+                            <th>Aplicación en BioAcción</th>
+                            <th>Impacto Ambiental</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Extensión de vida útil</strong></td>
+                            <td>Hardware modular y actualizaciones de software remotas.</td>
+                            <td>Reducción de residuos electrónicos (e-waste).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Eficiencia de recursos</strong></td>
+                            <td>Riego basado en datos reales (IoT).</td>
+                            <td>Conservación crítica de acuíferos y zonas de sequía.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Baja huella digital</strong></td>
+                            <td>Código optimizado y carga perezosa (lazy loading).</td>
+                            <td>Menor consumo de energía en centros de datos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="app-demo">
+            <h2>Panel de Monitoreo en Tiempo Real</h2>
+            <p>Utiliza el mapa interactivo para detectar zonas críticas y gestionar el riego inteligente.</p>
+            
+            <div class="dashboard-container">
+                <div id="map"></div>
+
+                <div class="tree-details" id="tree-card">
+                    <h3>Seguimiento Individual (Tree ID)</h3>
+                    <div class="card-content">
+                        <p><strong>Identificador:</strong> <span id="tree-id">Seleccione un ejemplar</span></p>
+                        <p><strong>Humedad Suelo:</strong> <span id="soil-moisture">--</span>%</p>
+                        <p><strong>Estado Riego:</strong> <span id="irrigation-status">--</span></p>
+                        
+                        <div class="progress-bar-bg">
+                            <div id="moisture-bar" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                    <button class="btn-action" onclick="activateIrrigation()">Activar Riego Remoto</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos-disponibles" class="contenedor-tabla">
+            <h3>Acciones Ambientales Cerca de Ti</h3>
+            <div class="filtros">
+                <input type="text" id="busqueda" placeholder="Buscar por ciudad o actividad..." onkeyup="filtrarEventos()">
+            </div>
+            
+            <table id="tabla-eventos">
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Categoría</th>
+                        <th>Ubicación</th>
+                        <th>Fecha</th>
+                        <th>Estado/Riesgo</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-eventos-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="crear-evento" class="form-container">
+            <h2>Organiza una Acción Ambiental</h2>
+            <form id="event-form">
+                <input type="text" id="nombre" placeholder="Nombre del evento" required>
+                
+                <select id="categoria" required>
+                    <option value="">Selecciona el tipo de actividad</option>
+                    <option value="limpieza">Limpieza de Residuos</option>
+                    <option value="reforestacion">Plantación de Árboles</option>
+                    <option value="riego">Mantenimiento de Riego</option>
+                    <option value="monitoreo">Identificación Digital</option>
+                </select>
+
+                <input type="date" id="fecha" required>
+                <input type="text" id="ubicacion" placeholder="Ciudad o Coordenadas GPS" required>
+                <textarea id="descripcion" placeholder="Describe brevemente el objetivo del evento..."></textarea>
+                
+                <button type="submit" class="btn-primary">Publicar Evento</button>
+            </form>
+
+            <div id="mensaje-exito" style="display:none;">
+                <p>¡Evento creado con éxito! Se ha enviado a revisión.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><a href="#hero">&copy; 2026 BioAcción — Unidos por la red, movidos por el verde</a></p>
+    </footer>
+
+    <script src="../js/javaScritp.js"></script>
+</body>
+</html>
+
