@@ -10,11 +10,11 @@ Es una solución tecnológica que combina una aplicación web de gestión colabo
 
 ## Integrantes:
 
-Claudia
+Claudia Beneroso Rivas
 
-Jorge
+Jorge González Burgos
 
-Raquel
+Raquel González Carrillo
 
 
 ---
@@ -47,9 +47,10 @@ Raquel
  * ciclo-vida.html, producto.html y equipo.html: Raquel
  * sostenibilidad.html: Jorge
  * README: Jorge
- * javaScript.js:
+ * javaScript.js: Raquel
  * sostenibilidad_app.js: Jorge
  * style.css: Raquel
+ * Galería de imágenes: Claudia
 
 Además del reparto de tareas, cada uno de los integrantes comparte los avances con el resto y pide opinión y sugerencias sobre el resultado.
 
